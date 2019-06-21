@@ -1,0 +1,5 @@
+<view class="untext">请问您取消预约的原因是什么？</view>
+<form bindsubmit="bindFormSubmit">
+  <textarea class='inputext' placeholder="请输入您想说的话" show-confirm-bar="true" placeholder-style="color:#cecece" name="textarea"></textarea>
+  <button class='btonontext' form-type="submit">确定</button>
+</form>

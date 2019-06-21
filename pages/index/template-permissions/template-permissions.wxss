@@ -1,0 +1,31 @@
+/* pages/index/template-permissions/template-permissions.wxss */
+#permissions{
+    width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); box-sizing: border-box;
+    position: fixed; top: 0; left: 0; padding-top: 250rpx;
+}
+.permissions{
+    width: 500rpx; height: 606rpx; background: url(https://www.zjwl.shop/bus/static/images/permissions.png) no-repeat; background-size: 100% 100%; 
+    margin: 0 auto; text-align: center; line-height: 36rpx; position: relative; padding-top: 118rpx; box-sizing: border-box;
+}
+.permissions image{
+    width: 186rpx; height: 192rpx;
+}
+.permissions .permissions_success{
+    font-size: 36rpx; color: #2A2A2A; font-family:PingFang-SC-Bold; font-weight:bold; margin-top: 50rpx; margin-bottom: 20rpx;
+}
+.permissions text{
+    font-size: 28rpx; color: #4B4B4B; 
+}
+.permissions_clear{
+    width: 64rpx!important; height: 104rpx!important; position: absolute; top: -103rpx; left: 218rpx; margin: 0!important;
+}
+.permissions_error{
+    font-size: 24rpx; color: #4B4B4B; font-family:PingFang-SC-Regular; font-weight:400; margin-top: 50rpx;
+}
+.permissions_content{
+    width: 100%; padding: 0 50rpx; box-sizing: border-box; font-size:28rpx; color: #4B4B4B; margin-top: 10rpx;
+}
+.permissions_error_btn{
+    width: 300rpx; height: 72rpx; font-size: 36rpx; color: #C15356; font-family:PingFang-SC-Medium; font-weight:500; margin: 0 auto; margin-top: 80rpx;
+    border: 2rpx solid #C15356; line-height: 72rpx; border-radius: 36rpx;
+}

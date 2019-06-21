@@ -1,0 +1,7 @@
+<!--pages/my/become/become.wxml-->
+<view id='become'>
+
+  <image class="" mode="widthFix" src="{{$state.url + '/static/images/'+img[$state.userinfo.userType - 1]+'.png'}}" />
+  <view class='become_btn' bindtap="routerUrl" data-url="/pages/{{isAppoint == 0 ? 'my/appointment/appointment' : 'boutique/tomakes/tomakes'}}">预约加盟</view>
+
+</view>

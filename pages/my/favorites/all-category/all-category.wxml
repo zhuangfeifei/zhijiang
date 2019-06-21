@@ -1,0 +1,18 @@
+<!--pages/my/all-category/all-category.wxml-->
+<template name="category">
+
+  <scroll-view scroll-y id='category' style="height: {{screenHeight+'px'}};">
+    <h3>全部类目</h3>
+    <view class='category_nav' bindtap="allcategoryDetails"><text>全部类目</text><text>{{$state.collotionCategory.totalCount}}</text></view>
+    <block wx:for="{{$state.collotionCategory.data}}" wx:key="{{index}}">
+      <h3>{{item.categoryName}}</h3>
+      <view class='category_list'>
+        <view class='category_nav' wx:for="{{item.listSmall}}" wx:for-item="itemName" wx:for-index="indexItem" wx:key="{{indexItem}}" 
+        bindtap='categoryDetails' data-smallCategoryId="{{itemName.smallCategoryId}}" data-categoryId="{{item.categoryId}}">
+          <text>{{itemName.categoryNameSmall}}</text><text>{{itemName.clothCount}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+</template>

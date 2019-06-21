@@ -1,0 +1,13 @@
+<!--pages/my/template-package/template-package.wxml-->
+<template name="package">
+  <block wx:for="{{promotionList}}" wx:key="{{index}}">
+    <view class='recommended_list' bindtap='promotionListDetails' data-data="{{item}}">
+      <image src="{{$state.imgUrlotler && item.ratechartpic ? $state.imgUrlotler + item.ratechartpic : '/images/home/noneimgs.png'}}"></image>
+      <view class='recommended_list_content'>
+        <view>{{item.title}}</view>
+        <view><text>套餐包含：{{item.description}}</text></view>
+        <view class='price'><text>¥{{item.presentprice}}</text><text>¥{{item.originalprice}}</text></view>
+      </view>
+    </view>
+  </block>
+</template>

@@ -1,0 +1,30 @@
+<!-- 头部导航 -->
+<view class='navterion'>
+  <image src="{{imglist[index_active]}}" />
+  <view class="ontapimlist">
+    <view wx:for="{{catspoid}}" wx:key="{{index}}" class="{{index_active == index ? 'ontapimlist_active' : ''}}"
+      catchtap='ontittext' data-index="{{index}}"></view>
+  </view>
+  <!-- <view wx:for="{{optext}}" wx:key="{{optext}}" data-id='{{index}}' data-index='{{item.ID}}' style="{{index == id?'color:black':'font-size:25rpx'}}" catchtap='ontittext'>{{item.CATEGORY_NAME}}</view>
+  <view wx:for="{{optext}}" wx:key="{{optext}}" data-id='{{index}}' data-index='{{item.ID}}' style="{{index == id?'color:black':'font-size:25rpx'}}" catchtap='ontittext'>{{item.CATEGORY_NAME}}</view> -->
+</view>
+<!-- 一字肩款 -->
+<image wx:if="{{isImg}}" animation="{{animationRound}}" src="/images/my/loading.png"
+class="lodimgs" />
+<view class='onejian' data-id='{{index}}' wx:for="{{oncondet}}" wx:key="{{oncondet}}">
+  <view wx:if="{{item.clothList!='该类目下无数据'||item.clothList==Array}}">
+    <view class='onetext'>{{item.categoryName}}</view>
+    <view class='flex-container' data-id='{{index}}'>
+      <view wx:if="{{index<6}}" class='item-contaion' wx:for="{{item.clothList}}" wx:for-item="itemName"
+        wx:key="{{index}}">
+        <image mode="aspectFill" bindload="isImg" lazy-load="true" wx:if="{{itemName.thumbnail_pic}}"
+          src='{{$state.imgUrl + itemName.thumbnail_pic}}' data-index="{{id}}" catchtap='ondetails'
+          data-id="{{itemName.id}}" data-num="{{itemName.iscollotion}}" data-name='{{item.categoryName}}'></image>
+        <image wx:else data-id='{{index}}' src='/images/home/noneimgs.png'></image>
+      </view>
+    </view>
+    <view class='btnmore'>
+      <image src='/images/more.png' data-data="{{item}}" data-id="{{index}}" catchtap="bintapdeil"></image>
+    </view>
+  </view>
+</view>

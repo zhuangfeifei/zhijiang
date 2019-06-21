@@ -1,0 +1,37 @@
+<!--预约成功图片-->
+<view class='topcimgs'>
+  <image src='/images/home/tomask.png'></image>
+</view>
+<view class='tomask_text'>预约成功</view>
+<view wx:if="{{tomaks==0}}" class='tomask_test'>我们将在1小时内联系您，请保持手机畅通</view>
+<view wx:else class='tomask_test'>请您于约定时间到店，时间以商家回复为准，谢谢</view>
+<!--预约单-->
+<view class='tomake_order'>
+  <view class='tomake_title'>预约单</view>
+  <view class='tomake_list'>
+    <view>姓名</view>
+    <text>{{getAppoint.realname}}</text>
+  </view>
+  <view class='tomake_list'>
+    <view>电话</view>
+    <text>{{getAppoint.phone}}</text>
+  </view>
+  <view class='tomake_list'>
+    <view>时间</view>
+    <text>{{getAppoint.ordertime}}</text>
+  </view>
+  <view class='tomake_lists'>
+    <view>内容</view>
+    <text>{{getAppoint.content}}</text>
+  </view>
+   <view class='tomake_lists' wx:if="{{getAppoint.reply}}">
+    <view>商家回复</view>
+    <text style='color:red'>{{getAppoint.reply}}</text>
+  </view>
+  <view class='tomake_lists'>
+    <view>公司地址</view>
+    <text>苏州织匠网络科技有限公司\n江苏省苏州市相城区华元路迈家众创A8408</text>
+  </view>
+  <view class='onbunom' bindtap='toaddres'>导航</view>
+  <view class='tomale_colse' bindtap='untomaskme'>取消预约</view>
+</view>

@@ -1,0 +1,13 @@
+<!--pages/my/template-goodsList/template-goodsList.wxml-->
+<template name="goodsList">
+  <block wx:for="{{promotionList}}" wx:key="{{index}}">
+    <view class='recommended_list' bindtap='goodsListDetails' data-data="{{item}}">
+      <image src="{{$state.imgUrl && item.thumbnail_pic ? $state.imgUrl + item.thumbnail_pic : '/images/home/noneimgs.png'}}"></image>
+      <view class='recommended_list_content'>
+        <view>{{item.goods_name}}</view>
+        <view><text>库存：{{item.inventory}}件</text><text>{{item.collection_num}}人收藏</text></view>
+        <view class='price'><text>{{item.lebalname}}</text></view>
+      </view>
+    </view>
+  </block>
+</template>

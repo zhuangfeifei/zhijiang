@@ -1,0 +1,14 @@
+<!--pages/my/complaints/complaints.wxml-->
+<view id='complaints'>
+
+  <text>请写下您的宝贵意见</text>
+  <view class="section">
+    <textarea bindinput="changeTextarea"
+      placeholder="请输入您想说的话"
+      placeholder-style="color: gray;" maxlength="450"
+    />
+  </view>
+  
+  <view class='complaints_success' bindtap='addCs'>提  交</view>
+
+</view>

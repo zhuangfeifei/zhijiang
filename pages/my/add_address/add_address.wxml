@@ -1,0 +1,36 @@
+<!--pages/my/add_address/add_address.wxml-->
+<view id='add_address'>
+
+  <view class='add_list'>
+    <text>收货人</text>
+    <view class="section">
+      <input bindinput="nameChange" value="{{list.name}}" placeholder="请输入收货人" placeholder-style="color:#CECECE;" />
+    </view>
+  </view>
+  <view class='add_list'>
+    <text>手机号码</text>
+    <view class="section">
+      <input bindinput="phoneChange" value="{{list.phone}}" placeholder="请输入手机号码" placeholder-style="color:#CECECE;" />
+    </view>
+  </view>
+  <view class='add_list'>
+    <text>省/市/区</text>
+    <view class="section">
+      <picker mode="region" bindchange="bindRegionChange" value="{{list.region}}" >
+        <view class="picker">
+          <view wx:if="{{list.region.length > 0}}">{{list.region[0]}}，{{list.region[1]}}，{{list.region[2]}}</view><text wx:else>请选择</text>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='add_list'>
+    <text>详细地址</text>
+    <view class="section">
+      <input bindinput="detailChange" value="{{list.detail}}" placeholder="请输入街道门牌等信息" placeholder-style="color:#CECECE;" />
+    </view>
+  </view>
+
+  <button bindtap="addadress" class="{{ list.name && list.phone && list.region.length > 0 && list.detail ? 'avtive_btn' : ''}}" 
+    disabled="{{list.name && list.phone && list.region.length > 0 && list.detail ? false : true}}">保存地址</button>
+
+</view>

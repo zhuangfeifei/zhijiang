@@ -1,0 +1,16 @@
+<!--pages/my/all-state/all-state.wxml-->
+<template name="state">
+
+  <scroll-view scroll-y id='state' style="height: {{screenHeight+'px'}};">
+    <block>
+      <view class='state_list'>
+        <view class='state_nav' bindtap="collotionStatusCloth" data-state="0"><text>全部</text><text>{{$state.collotionStatus.totalCount}}</text></view>
+        <view class='state_nav' bindtap="collotionStatusCloth" data-state="2"><text>已下架</text><text>{{$state.collotionStatus.statusDownCount}}</text></view>
+        <view class='state_nav' bindtap="collotionStatusCloth" data-state="3"><text>库存紧张</text><text>{{$state.collotionStatus.willSoldOutCount}}</text></view>
+        <view class='state_nav' bindtap="collotionStatusCloth" data-state="1"><text>即将下架</text><text>{{$state.collotionStatus.statusUpCount}}</text></view>
+        <view class='state_nav' bindtap="collotionStatusCloth" data-state="4"><text>已售罄</text><text>{{$state.collotionStatus.soldOutCount}}</text></view>
+      </view>
+    </block>
+  </scroll-view>
+
+</template>

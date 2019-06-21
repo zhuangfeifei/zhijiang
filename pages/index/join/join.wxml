@@ -1,0 +1,4 @@
+
+<image src="{{$state.imgad+'jmall.jpg'}}"></image>
+<view style='height:60rpx;'></view>
+<view class='jionad' bindtap="routerUrl" data-url="/pages/{{isAppoint == 0 ? 'my/appointment/appointment' : 'boutique/tomakes/tomakes'}}">预约加盟</view>

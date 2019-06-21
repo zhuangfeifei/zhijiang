@@ -1,0 +1,57 @@
+<!--pages/my/appointment/appointment.wxml-->
+<view id='appointment'>
+
+  <view class='label'>姓名</view>
+  <view class="section">
+    <input placeholder="请写下您的姓名" placeholder-style="color:#CECECE;" bindinput="bindKeyInput" />
+  </view>
+  <view class='label'>电话</view>
+  <view class="section">
+    <input placeholder="请写下您的电话" placeholder-style="color:#CECECE;" bindinput="bindKeyphone" />
+  </view>
+  <view class='label'>时间</view>
+  <view class="section" bindtap='changTime'>
+    <view class="appointment_time {{isChange ? 'appointment_times' : ''}}" wx:if="{{isChange}}">{{year}}年{{month}}月{{day}}日{{hour}}时{{minute}}分</view>
+    <view class='appointment_time' wx:else>请选择您想预约的时间</view>
+  </view>
+  <view class='label'>内容
+    <text style='color:#c15356'>（您是预约加盟事项还是预约试纱）</text>
+  </view>
+  <view class="section">
+    <input placeholder="想具体聊一下加盟的事情" placeholder-style="color:#CECECE;" bindinput="bindKeytext"/>
+  </view>
+
+  <button bindtap='tapindex'>立即预约</button>
+
+
+  <view id='picker_' wx:if="{{changTime}}">
+    <view bindtap='changTime' style="width:100%; height: 50%;"></view>
+    <view class='picker' animation="{{animationBottom}}">
+      <view class='picker_list'><text>年</text><text>月</text><text>日</text><text>时</text><text>分</text></view>
+      <picker-view
+        indicator-style="height: 50px;"
+        style="width: 100%; height: 410rpx;"
+        value="{{value}}"
+        bindchange="bindChange"
+      >
+        <picker-view-column>
+          <view wx:for="{{years}}" wx:key="index" style="line-height: 50px; padding-left: 30rpx;">{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{months}}" wx:key="index" style="line-height: 50px; padding-left: 60rpx;">{{item}}月</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{days}}" wx:key="index" style="line-height: 50px; padding-left: 60rpx;">{{item}}日</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{hours}}" wx:key="index" style="line-height: 50px; padding-left: 60rpx;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{minutes}}" wx:key="index" style="line-height: 50px; padding-left: 60rpx;">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+      <view class='picker_determine' bindtap='setTime'>确  定</view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,214 @@
+/* pages/my/my.wxss */
+@import './template-goodsList/template-goodsList.wxss';
+@import './template-package/template-package.wxss';
+
+#my {
+  width: 750rpx;
+  background: rgba(246, 246, 246, 1);
+  padding-bottom: 20rpx;
+}
+
+.my_nav {
+  width: 100%;
+  height: 620rpx;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 98rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.portrait_back {
+  width: 100%;
+  height: 465rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.my_nav_ {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.name {
+  font-size: 48rpx;
+  color: #1a213c;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  line-height: 35rpx;
+}
+
+.name text {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(26, 26, 26, 1);
+}
+
+.my_portrait {
+  width: 80%;
+  height: 220rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 69rpx;
+}
+
+.my_portrait image {
+  width: 94rpx;
+  height: 94rpx;
+}
+
+.my_portrait view {
+  width: 220rpx;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.my_portrait view image:nth-child(1) {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.my_portrait view image:nth-child(2) {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.my_nav_tab {
+  width: 80%;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.my_nav_tab view {
+  width: 219rpx;
+  height: 49rpx;
+}
+.my_nav_tab view button{
+  width: 114rpx; background: none; padding: 0; border-radius: 0; line-height: 0; border: none!important;
+  height: 49rpx;
+}
+.my_nav_tab view button::after {
+  border: none;
+}
+
+.my_nav_tab view:nth-child(1) image {
+  width: 90rpx;
+  height: 46rpx;
+}
+
+.my_nav_tab view:nth-child(2) image, .my_nav_tab view:nth-child(4) image {
+  width: 3rpx;
+  height: 20rpx;
+}
+
+.my_nav_tab view:nth-child(3) image {
+  width: 114rpx;
+  height: 49rpx;
+}
+
+.my_nav_tab view:nth-child(5) image {
+  width: 88rpx;
+  height: 49rpx;
+}
+
+.Become {
+  width: 100%;
+  height: 448rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.Become_title, .recommended_title {
+  width: 100%;
+  height: 132rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2rpx solid #e8e8e8;
+}
+
+.Become_title image, .recommended_title image {
+  width: 253rpx;
+  height: 59rpx;
+}
+
+.Become_tab {
+  width: 95%;
+  height: 200rpx;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+
+.Become_tab_list {
+  width: 180rpx;
+  height: 180rpx;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.Become_tab_list view {
+  width: 100%;
+  height: 48rpx;
+  color: #1a213c;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  background-color: #bdd4de;
+  line-height: 48rpx;
+}
+
+.Become_tab_list image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 26rpx;
+}
+
+.Details {
+  width: 160rpx;
+  height: 46rpx;
+  color: #c15356;
+  border: 2rpx solid #c15356;
+  border-radius: 50rpx;
+  margin: 10rpx auto;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 46rpx;
+}
+
+.recommended {
+  width: 100%;
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.recommended_title image {
+  width: 187rpx;
+  height: 60rpx;
+}
+
+.goodsList {
+  width: 100%;
+  padding: 30rpx 0;
+}

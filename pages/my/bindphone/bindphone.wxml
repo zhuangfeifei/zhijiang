@@ -1,0 +1,15 @@
+<!--pages/my/bindphone/bindphone.wxml-->
+<view id='bindphone'>
+
+  <view class='label'>电话</view>
+  <view class="section">
+    <input bindinput='phone' placeholder="请输入手机号" placeholder-style="color:#CECECE;" />
+  </view>
+  <view class='label'>验证码</view>
+  <view class="section">
+    <input bindinput='code' placeholder="请输入验证码" placeholder-style="color:#CECECE;" /><text bindtap="getCode">{{ isCode ? '获取验证码' : time+'s'}}</text>
+  </view>
+
+  <button class="{{phone && code ? 'active_btn' : ''}}" bindtap="bindPhone">完  成</button>
+
+</view>

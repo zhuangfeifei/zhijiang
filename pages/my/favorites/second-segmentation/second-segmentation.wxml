@@ -1,0 +1,11 @@
+<!--pages/my/second-segmentation/second-segmentation.wxml-->
+<template name="segmentation">
+  <view id='segmentation'>
+    <block wx:for="{{list}}" wx:key="index">
+      <view class='segmentation_list' bindtap='checke' data-data="{{item}}" data-index="{{index}}">
+        <image src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1906062556,3201568577&fm=27&gp=0.jpg'></image>
+        <view wx:if="{{!isAnimation}}"><image wx:if="{{item.checked}}" src='/images/my/checked.png'></image></view>
+      </view>
+    </block>
+  </view>
+</template>

@@ -1,0 +1,25 @@
+/* pages/my/all-category/all-category.wxss */
+
+#category{
+  width: 100%; background-color: #FFFFFF;
+}
+
+h3{
+  font-size: 30rpx; color: #4B4B4B; margin-left: 40rpx; font-family:PingFang-SC-Medium; font-weight:500; 
+  line-height: 100rpx;
+}
+.category_nav{
+  width: 325rpx; height: 64rpx; font-size: 24rpx; color: #2B2B2B; line-height: 64rpx; box-sizing: border-box; margin-bottom: 20rpx;
+  display: flex; justify-content: space-between; padding: 0 20rpx; background-color: #F6F6F6; margin-left: 40rpx;
+}
+.category_nav text:nth-child(2){
+  font-size: 20rpx; color: #808080;
+}
+
+
+.category_list{
+  width: 100%; display: flex; flex-wrap: wrap; padding-left: 40rpx; box-sizing: border-box;
+}
+.category_list .category_nav{
+  margin: 0; margin-right: 20rpx; margin-bottom: 20rpx;
+}

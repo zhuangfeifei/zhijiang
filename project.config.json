@@ -1,0 +1,116 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.4",
+	"appid": "wxc9c1c4dd46542385",
+	"projectname": "daiximini",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 9,
+			"list": [
+				{
+					"id": -1,
+					"name": "精品区",
+					"pathName": "pages/boutique/boutique",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新闻",
+					"pathName": "pages/news/news",
+					"query": "name=name",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/index/wedding_details/wedding_details",
+					"query": "name=name",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品分享",
+					"pathName": "pages/index/wedding_details/onpaydet/onpaydet",
+					"query": "name=name",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "取消预约",
+					"pathName": "pages/boutique/untomake/untomake",
+					"query": "name=name",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品列表",
+					"pathName": "pages/boutique/detil/detil",
+					"query": "name=name",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "立即预约",
+					"pathName": "pages/my/appointment/appointment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "案例详情",
+					"pathName": "pages/news/detail/detail",
+					"query": "name=name",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员中心",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "套餐详情",
+					"pathName": "pages/my/details/details",
+					"scene": null
+				}
+			]
+		}
+	}
+}

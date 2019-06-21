@@ -1,0 +1,14 @@
+<!--pages/my/about/about.wxml-->
+<view id='about'>
+
+  <view class='about_list' bindtap="routerUrl" data-url='/pages/my/instructions/instructions'>
+    <text>产品说明</text><image src='/images/my/more.png'></image>
+  </view>
+  <view class='about_list' bindtap="callPhone">
+    <text>联系我们</text><image src='/images/my/more.png'></image>
+  </view>
+  <view class='about_list' bindtap="routerUrl" data-url='/pages/my/complaints_list/complaints_list'>
+    <text>投诉建议</text><image src='/images/my/more.png'></image>
+  </view>
+
+</view>

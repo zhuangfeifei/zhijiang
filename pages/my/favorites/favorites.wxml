@@ -1,0 +1,66 @@
+<!--pages/my/favorites/favorites.wxml-->
+<import src='./favorites-goodsList/favorites-goodsList' />
+<import src='./all-category/all-category' />
+<import src='./all-state/all-state' />
+<import src='./second-segmentation/second-segmentation' />
+
+<view id='favorites' style="padding-bottom: {{!isAnimation ? '98rpx' : '20rpx'}}" class="{{allCategory || allState ? 'scroll' : ''}}">
+
+  <view class='favorites'>
+    <view class='favorites_nav'>
+      <view>
+        <text bindtap='allCategory'>全部类目</text>
+        <image bindtap='allCategory' src="/images/my/{{allCategory ? 'up' : 'down'}}.png"></image>
+        <text bindtap='allState'>全部状态</text>
+        <image bindtap='allState' src="/images/my/{{allState ? 'up' : 'down'}}.png"></image>
+      </view>
+      <view>
+        <image src="/images/my/management{{isManagement ? '' : 's'}}.png"></image>
+        <!-- <image bindtap='isManagement' src="/images/my/management{{isManagement ? '' : 's'}}.png"></image> -->
+        <text bindtap='management' class="{{!isAnimation ? 'complete' : ''}}">{{isAnimation ? '管理' : '完成'}}</text>
+      </view>
+    </view>
+    <view class='divider'></view>
+  </view>
+
+  <view class='favorites_list'>
+    <view wx:if="{{isManagement}}" class='goodsList_checked' animation="{{animationRight}}">
+      <view class='goodsList_checked_' wx:for="{{collotionCloth}}" wx:key="{{index}}" bindtap='checke' data-data="{{item}}" data-index="{{index}}">
+        <view><image wx:if="{{item.checked}}" src='/images/my/checked.png'></image></view>
+      </view>
+    </view>
+    <!-- 一状态 -->
+    <view wx:if="{{isManagement}}" class='goodsList' animation="{{animationLeft}}" style="min-height: {{screenHeight+'px'}};">
+      <template is="favorites_goodsList" data="{{$state,collotionCloth,screenHeight}}"></template>
+    </view>
+    <!-- 二状态 -->
+    <view wx:else class='goodsList_'>
+      <template is="segmentation" data="{{$state,collotionCloth,isAnimation}}"></template>
+    </view>
+  </view>
+  <view class='noMore' wx:if="{{isMore}}">
+    <image wx:if="{{!isMore}}" src="/images/my/loading.png" animation="{{animationRound}}" />
+    <text wx:if="{{!isMore}}">正在加载...</text>
+    <text wx:if="{{collotionCloth.length >= 10 && isMore}}">~没有更多了~</text>
+  </view>
+
+  <view class='management' wx:if="{{!isAnimation}}">
+    <view bindtap='checkedAll'>
+      <view><image wx:if="{{checkedAll}}" src='/images/my/checked.png'></image></view><text>全选</text>
+    </view>
+    <view>
+      <button bindtap="emptyShelves">清空下架</button>
+      <button bindtap="deleteCollotion">删除</button>
+    </view>
+  </view>
+
+  <!-- 全部类目 -->
+  <view class='allCategory' wx:if="{{allCategory}}">
+    <template is="category" data="{{$state, screenHeight: screenHeight}}"></template>
+  </view>
+  <!-- 全部状态 -->
+  <view class='allCategory' wx:if="{{allState}}">
+    <template is="state" data="{{$state, screenHeight: screenHeight}}"></template>
+  </view>
+
+</view>

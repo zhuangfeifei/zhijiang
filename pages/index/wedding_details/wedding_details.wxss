@@ -1,0 +1,267 @@
+page {
+  background: rgba(255, 255, 255, 1);
+}
+.top-swiper {
+  width: 100%;
+  max-height: 960rpx;
+  background: rgba(255, 255, 255, 1);
+}
+.top-swiper swiper {
+  width: 670rpx;
+  height: 670rpx;
+  margin:40rpx auto;
+  border-radius: 10rpx;
+}
+.lodimgs{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  left: calc((100% - 40rpx) / 2);
+  margin-top: 20rpx
+}
+.swiper_image {
+  width: 670rpx;
+  height: 670rpx;
+  border-radius:10rpx;
+}
+
+.conttext {
+  width: 670rpx;
+  max-height: 130rpx;
+  margin: 48rpx auto;
+}
+
+.conttext view {
+  width: 690rpx;
+  max-height: 90rpx;
+  font-size: 32rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(42, 42, 42, 1);
+  line-height: 45rpx;
+  overflow: hidden;
+}
+
+.conviews {
+  width: 670rpx;
+  height: 50rpx;
+  margin: auto;
+  display: flex;
+  position: relative;
+  top: -20rpx;
+  overflow: hidden;
+}
+
+.conviews text {
+  width: auto;
+  height: 50rpx;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(193, 83, 86, 1);
+  line-height: 50rpx;
+  position: relative;
+  top: -10rpx;
+}
+
+.conviews text:nth-child(2) {
+  margin-left: 15rpx;
+}
+
+.conviews text:nth-child(3) {
+  margin-left: 15rpx;
+}
+
+.inventory {
+  width: 640rpx;
+  height: 90rpx;
+  display: flex;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(128, 128, 128, 1);
+  line-height: 58rpx;
+  margin: auto;
+  position: relative;
+  top: -30rpx;
+}
+
+.binxinzcan {
+  width: 670rpx;
+  height: 50rpx;
+  margin: auto;
+  display: flex;
+}
+
+.binxinzcan image {
+  width: 35rpx;
+  height: 35rpx;
+  margin: auto;
+  position: relative;
+  top: -35rpx;
+}
+
+.ondetils {
+  width: 750rpx;
+  height: auto;
+  background: rgba(255, 255, 255, 1);
+  margin-top: 5px;
+}
+
+.ondetils_logos {
+  width: 670rpx;
+  height: 180rpx;
+  margin: auto;
+  display: flex;
+}
+
+.zhanwei {
+  width: 100%;
+  height: 15rpx;
+  background: #f6f6f6;
+}
+
+.wedding_de {
+  width: 100%;
+  height: 1rpx;
+  background: rgba(246, 203, 197, 1);
+  margin-top: 80rpx;
+}
+
+.onzhanweis {
+  width: 250rpx;
+  height: 63rpx;
+  margin: auto;
+  position: relative;
+  top: -30rpx;
+  background: #fff;
+  text-align: center;
+}
+
+.onzhanweis image{
+  width: 187rpx;
+  height: 63rpx;
+}
+
+.logos {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 40rpx;
+  border-radius: 50%;
+}
+
+.logos image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.logos_text {
+  width: 400rpx;
+  height: 100rpx;
+  margin: 40rpx 20rpx;
+}
+
+.ontaodetils {
+  width: 160rpx;
+  height: 56rpx;
+  border: 1rpx solid rgba(193, 83, 86, 1);
+  border-radius: 28rpx;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 56rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(193, 83, 86, 1);
+  position: relative;
+  top: 60rpx;
+}
+
+.sogans {
+  font-size: 31rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(43, 43, 43, 1);
+}
+
+.sogans_relon {
+  font-size: 25rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(39, 175, 30, 1);
+}
+
+.sogans_relon image {
+  width: 29rpx;
+  height: 29rpx;
+  margin-top: 5px;
+}
+
+.sogans_relon text {
+  position: relative;
+  top: -4rpx;
+  left: 4px;
+}
+
+.wxParse-p {
+  width: 670rpx;
+  margin: auto;
+}
+
+.wxParse-img {
+  width: 100%;
+}
+
+.WxEmojiView {
+  width: 670rpx;
+  height: auto;
+  margin: 5px auto;
+  font-size: 26rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  word-break: break-all;
+  color: rgba(75, 75, 75, 1);
+}
+
+.navigation {
+  width: 750rpx;
+  height: 105rpx;
+  border-top: 0.5rpx solid rgba(193, 83, 86, 1);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+}
+
+.navigation_next {
+  width: 128rpx;
+  height: 105rpx;
+  text-align: center;
+  background: #fff;
+}
+
+.navigation_next  image {
+  width: 40rpx;
+  height: 64rpx;
+  margin-top: 20rpx;
+}
+
+.navigation_next  button {
+  width: 128rpx;
+  height: 105rpx;
+  background-color: #fff;
+}
+
+button::after {
+  border: none;
+}
+
+.navigation_nexttap {
+  width: 375rpx;
+  height: 105rpx;
+  text-align: center;
+  line-height: 105rpx;
+  color: #fff;
+  font-size: 30rpx;
+  letter-spacing: 1px;
+  background: rgba(193, 83, 86, 1);
+}

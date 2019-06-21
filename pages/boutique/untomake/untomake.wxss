@@ -1,0 +1,44 @@
+.untext {
+  width: 85%;
+  height: 50rpx;
+  margin: auto;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  line-height: 150rpx;
+  color:rgba(75,75,75,1);
+}
+
+.inputext {
+  width: 80%;
+  height: 380rpx;
+  background: rgba(246, 246, 246, 1);
+  margin: 75rpx auto;
+  resize: none;
+  font-size: 29rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  line-height: 30rpx;
+  padding: 10px;
+}
+
+.btonontext {
+  width: 300rpx;
+  height: 74rpx;
+  border-style: none;
+  border: 1px solid rgba(193, 83, 86, 1);
+  border-radius: 36rpx;
+  margin: 55px auto;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 73rpx;
+  letter-spacing: 2rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(193, 83, 86, 1);
+  background-color: #fff;
+}
+
+button::after{
+  border: none;
+}

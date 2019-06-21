@@ -1,0 +1,23 @@
+<!--pages/my/favorites/favorites-goodsList/favorites-goodsList.wxml-->
+<template name="favorites_goodsList">
+  <block wx:for="{{collotionCloth}}" wx:key="{{index}}">
+    <view class='recommended_list' bindtap='goodsListDetails' data-data="{{item}}">
+      <image src="{{$state.imgUrl && item.thumbnail_pic ? $state.imgUrl + item.thumbnail_pic : '/images/home/noneimgs.png'}}"></image>
+      <view class='recommended_list_content'>
+        <view>{{item.goods_name}}</view>
+        <view>
+          <text>库存：{{item.inventory}}件</text>
+          <text>{{item.collection_num}}人收藏</text>
+        </view>
+        <view class='price'>
+          <text>{{item.lebalname}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <view wx:if="{{collotionCloth.length == 0}}" class='no_favorites_goodsList'>
+    <image src='/images/my/no_favorites.png'></image>
+    <view>您还没有收藏哦</view>
+  </view>
+</template>

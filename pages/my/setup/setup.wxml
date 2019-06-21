@@ -1,0 +1,17 @@
+<!--pages/my/setup/setup.wxml-->
+<view id='setup'>
+
+  <view class='setup_list' bindtap="routerUrl" data-url='/pages/my/certification/certification'>
+    <text>权限认证</text><image src='/images/my/more.png'></image>
+  </view>
+  <view class='setup_list' bindtap="routerUrl" data-url='/pages/my/bindphone/bindphone'>
+    <text>绑定手机号</text><view><text>{{$state.userinfo.phonenumber}}</text><image src='/images/my/more.png'></image></view>
+  </view>
+  <view class='setup_list' bindtap="routerUrl" data-url='/pages/my/address/address'>
+    <text>收货地址</text><image src='/images/my/more.png'></image>
+  </view>
+  <view class='setup_list'>
+    <text>版本信息</text><text>v1.0.0</text>
+  </view>
+
+</view>

@@ -1,0 +1,170 @@
+@import './template-permissions/template-permissions.wxss';
+.conternr {
+  width: 100%;
+  height: 1325rpx;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 1);
+}
+
+swiper {
+  width: 100%;
+  height: 647rpx;
+}
+.topswimg{
+  width: 100%;
+  height: 647rpx;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.conmoves {
+  width: 710rpx;
+  height: 400rpx;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.imgvide {
+  width: 742rpx;
+  height: 434rpx;
+  position: relative;
+  top: -429rpx;
+  left: -17rpx;
+}
+
+.imgvides {
+  width: 98rpx;
+  height: 97rpx;
+  position: absolute;
+  top: 815rpx;
+  margin-left: -50rpx;
+}
+
+.conmoves video {
+  width: 710rpx;
+  height: 400rpx;
+}
+
+.Join_img {
+  width: 750rpx;
+  height: 200rpx;
+  margin-top: 5rpx;
+}
+
+.oncolor {
+  width: 750rpx;
+  height: 18rpx;
+  background: #f6f6f6;
+}
+
+.Featured {
+  width: 750rpx;
+  height: auto;
+  background: rgba(255, 255, 255, 1);
+}
+
+.featun {
+  width: 100%;
+  height: 120rpx;
+  text-align: center;
+}
+
+.featun image {
+  width: 278rpx;
+  height: 66rpx;
+  margin-top: 35rpx;
+}
+
+.link_viewssd {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.link_conier {
+  width: 345rpx;
+  height: auto;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 16rpx 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+
+.list_view {
+  width: 325rpx;
+  height: 368rpx;
+  background: rgba(234, 236, 240, 1);
+  margin: 5px auto;
+}
+
+.list_img {
+  width: 285rpx;
+  height: 285rpx;
+  margin: auto;
+  position: relative;
+  top: 20rpx;
+  background: #fff;
+}
+
+.list_img image {
+  width: 285rpx;
+  height: 285rpx;
+}
+
+.list_img view {
+  max-width: 285rpx;
+  height: 35rpx;
+  font-size: 24rpx;
+  text-align: center;
+  overflow: hidden;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(42, 42, 42, 1);
+  margin-top: 6rpx;
+}
+.lodimgs{
+  width: 100%;
+  height: 647rpx;
+}
+.browse {
+  width: 325rpx;
+  height: 50rpx;
+  margin: auto;
+  display: flex;
+}
+
+.browse image {
+  width: 24rpx;
+  height: 20rpx;
+  margin: 5rpx;
+}
+
+.browse_texts {
+  padding-left: 6rpx;
+  font-size: 19rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(26, 33, 60, 1);
+}
+
+.btomsar {
+  width: 100%;
+  height: 70rpx;
+  text-align: center;
+  background: #f6f6f6;
+  margin-top: 50rpx;
+}
+
+.btomsar image {
+  width: 120rpx;
+  height: 22rpx;
+  position: relative;
+  top: 10rpx;
+}

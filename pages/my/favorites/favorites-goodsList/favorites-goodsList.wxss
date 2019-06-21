@@ -1,0 +1,60 @@
+/* pages/my/favorites/favorites-goodsList/favorites-goodsList.wxss */
+.recommended_list {
+  width: 100%;
+  height: 130rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  margin-bottom: 48rpx;
+  color: #2b2b2b;
+}
+.recommended_list:last-child{ margin-bottom: 0; }
+.recommended_list image{
+  width: 130rpx; height: 130rpx; border-radius: 10rpx;
+}
+
+.recommended_list image {
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.recommended_list_content {
+  width: calc(100% - 130rpx - 48rpx);
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.recommended_list_content view:nth-child(1) {
+  width: 100%;
+  height: 24rpx; font-size: 24rpx;
+  line-height: 24rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.recommended_list_content view:nth-child(2) {
+   position: relative; top: -10rpx;
+}
+.recommended_list_content text{
+  font-size: 20rpx; color: #808080; margin-right: 77rpx;
+}
+.price{ width: 100%; height: 24rpx; line-height: 24rpx; }
+.price text:nth-child(1){
+  font-size: 24rpx; color: #C15356!important; font-family:PingFang-SC-Medium; font-weight:bold;
+}
+
+
+
+.no_favorites_goodsList{
+  width: 100%; height: 100%; background-color: #FFFFFF; text-align: center; box-sizing: border-box;
+  padding-top: 200rpx; color: #2A2A2A; font-size: 24rpx; font-family:PingFang-SC-Medium; font-weight:500;
+}
+.no_favorites_goodsList image{ width: 159rpx; height: 159rpx; margin-bottom: 30rpx; }

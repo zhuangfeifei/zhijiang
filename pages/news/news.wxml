@@ -1,0 +1,47 @@
+<!-- 轮播图 -->
+<view class='contopitit'>
+  <swiper class="imageContainer" bindchange="handleImgChange" previous-margin="70rpx" next-margin="70rpx" circular="true" autoplay="true">
+    <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}" data-id="{{index}}">
+      <swiper-item class="item">
+        <view class="currindex">
+          <image wx:if="{{isImg}}" src="{{$state.imgUrlotler+imgUrls[0].pic}}" class="itemImg" />
+          <image mode="aspectFill" bindload="isImg" class="itemImg {{currentIndex == index ? 'active': ''}}"
+           src="{{$state.imgUrlotler+imgUrls[index].pic}}" data-id='{{imgUrls[index].id}}'
+            data-index='{{index}}' catchtap='ontapimglist'></image>
+        </view>
+        <view class="ontextcontr" data-id="{{index}}" wx:if="{{currentIndex == index}}">
+          {{imgUrls[index].theme}}
+        </view>
+        <view class='ontextco'>{{imgUrls[index].name}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 占位 -->
+<view class='conterk'></view>
+<!-- 案例 -->
+<view class='btonm'>
+  <view class='btonm-item'>
+    <view wx:for="{{itemfx}}" class='onclassa' wx:key="{{itemfx}}" data-id='{{index}}' style="{{index == id?'border-bottom:5rpx solid #F6998C':'font-size: 24rpx'}}" catchtap='ontittext'>
+      {{itemfx[index].name}}
+    </view>
+  </view>
+  <view class='btonm-flexs'>
+   <image wx:if="{{isImg}}" animation="{{animationRound}}" src="/images/my/loading.png" class="lodimgs" />
+    <view wx:for="{{postlist}}" bindload="isImg" wx:key="{{postlist}}" data-id='{{index}}' class='ontitle' catchtap='ontapdeils'>
+      <image mode="aspectFill" src='{{$state.imgUrlotler+postlist[index].pic}}'></image>
+      <view class='btonm-title'>{{postlist[index].theme}}</view>
+      <view class='btonm-time'>{{postlist[index].ditime}}</view>
+    </view>
+    <view style='height:35rpx;'></view>
+  </view>
+  <view data-id='{{index}}' wx:if="{{postlist==Array||postlist.length==0}}" class='btomview'>
+    <view>
+      <image src='/images/home/tomask.png' class='onimgs'></image>
+    </view>
+    <text>暂无案例</text>
+  </view>
+</view>
+<view wx:if="{{secllod==false}}" class='btomsar'>
+  <image src='/images/none.png'></image>
+</view>

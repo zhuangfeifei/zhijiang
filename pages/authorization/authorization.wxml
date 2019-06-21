@@ -1,0 +1,9 @@
+<!--pages/authorization/authorization.wxml-->
+<view id='authorization'>
+  
+  <view class='authorization_nav'><image src='/images/my/authorization.png'></image></view>
+  <view class='authorization_title'>申请获取以下权限</view>
+  <text>获得你的公开信息（昵称，头像等）</text>
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+
+</view>

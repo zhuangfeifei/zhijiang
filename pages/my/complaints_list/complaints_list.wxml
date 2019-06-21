@@ -1,0 +1,28 @@
+<!--pages/my/complaints_list/complaints_list.wxml-->
+<view id='complaints_list'>
+
+  <block wx:for="{{myCs}}" wx:key="{{index}}">
+    <view class="complaints_list {{item.replay_status == 0 ? 'replay_status' : ''}}">
+      <image src='/images/my/describe.png'></image>
+      <view class='complaints_list_describe'>
+        <view><text>您的描述</text><text>{{item.create_time}}</text></view>
+        <view>{{item.reason}}</view>
+        <view wx:if="{{item.replay_status == 1}}" class='complaints_list_reply'>
+          <image src='/images/my/reply.png'></image>
+          <view>
+            <text>商家回复</text>
+            <view class='complaints_list_reply_content'>{{item.replay}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{item.replay_status == 0}}" class="cancel" bind:tap="cancel" data-id="{{item.id}}">取消反馈</view>
+  </block>
+
+  <view wx:if="{{myCs.length == 0}}" class='noComplaints' style='height: {{screenHeight}}px'>
+    <image src='/images/my/no_complaints.png'></image><view>目前还没有投诉建议</view>
+  </view>
+
+  <view class='complaints' bindtap="routerUrl" data-url='/pages/my/complaints/complaints'>立即反馈</view>
+
+</view>

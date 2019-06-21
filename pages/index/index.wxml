@@ -1,0 +1,58 @@
+<import src="./template-permissions/template-permissions" />
+<import src="../../img-loader/img-loader.wxml" />
+<template is="img-loader" data="{{ imgLoadList }}"></template>
+<view class='conternr'>
+  <!-- 轮播图 -->
+  <view style="background-image:url({{$state.imgUrlotler+imgUrlsPic}})" class="topswimg">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplayad}}" interval="{{interval}}" duration="{{duration}}"
+    indicator-active-color="#fff" circular="true">
+    <swiper-item wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+      <image mode="aspectFill" lazy-load="true" src="{{$state.imgUrlotler+item}}" class="slide-image"
+        data-id='{{index}}' catchtap='ontapdetail' />
+    </swiper-item>
+  </swiper>
+  </view>
+  <!-- 视频 -->
+  <view class='conmoves'>
+    <video muted="false" id="myAudio" custom-cache="{{false}}" enable-play-gesture="true"
+      src="https://www.zjwl.shop/dx/daisy.mp4"></video>
+    <image src="{{$state.imgad+'oming.png'}}" hidden="{{hiden}}" class="imgvide" bindtap="autoplays"></image>
+    <image src='/images/home/inpay.png' class="imgvides" hidden="{{hiden}}" bindtap="autoplays"></image>
+  </view>
+  <!-- 加盟方案 -->
+  <image src="{{$state.imgad+'jmjs.png'}}" class='Join_img' bindtap='tapjion'></image>
+</view>
+<view class='oncolor'></view>
+<!-- 精选婚纱 -->
+<view class='Featured' wx:if='{{postlist}}'>
+  <view class='featun'>
+    <image src='/images/home/copywriting.png'></image>
+  </view>
+  <view class='link_viewssd'>
+    <image wx:if="{{isImg}}" animation="{{animationRound}}" src="/images/my/loading.png" class="lodimgs" />
+    <view class='link_conier' wx:for='{{postlist}}' wx:key='{{postlist}}' data-id='{{index}}'>
+      <view class='list_view'>
+        <view class='list_img'>
+          <image mode="aspectFill" bindload="isImg" wx:if='{{item.thumbnail_pic.length>0}}'
+            src='{{$state.imgUrl+item.thumbnail_pic}}' data-id='{{index}}' catchtap='onwedtap'></image>
+          <image wx:else src='/images/home/noneimg.png' data-id='{{index}}' catchtap='onwedtap'></image>
+          <view>{{item.goods_name}}</view>
+        </view>
+      </view>
+      <view class='browse'>
+        <image wx:if="{{item.iscollotion==1}}" data-id="{{index}}" src='/images/home/oncollection.png'></image>
+        <image wx:else data-id="{{index}}" src='/images/home/collection.png'></image>
+        <text class='browse_texts'>{{item.collection_num}}</text>
+        <image src='/images/home/header.png' style="padding-left:35rpx;"></image>
+        <text class="browse_texts">{{item.click_num}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view style="height:50rpx;" wx:if="{{secllod==true}}"></view>
+<view wx:if="{{secllod==false}}" class='btomsar'>
+  <image src='/images/none.png'></image>
+</view>
+<!-- 权限 -->
+<template wx:if="{{$state.userinfo.authstatus > -1 && $state.isPermissions == 0 && isShow}}" is="permissions"
+  data="{{$state}}"></template>

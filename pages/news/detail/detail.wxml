@@ -1,0 +1,34 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<!-- 图片 -->
+<view class='top-swiper'>
+  <image wx:if="{{isImg}}" animation="{{animationRound}}" src="/images/my/loading.png" class="lodimgs" />
+  <image mode="aspectFill" bindload="isImg" src='{{$state.imgUrlotler+pic}}' class='topimg'></image>
+  <view class='contitle'>{{thme}}</view>
+  <view class='text'>{{caseName}}</view>
+  <view class='imgstrl'>
+    <image wx:if="{{iscollotion==0}}" src='/images/home/dianan.png' class='btomimgs' catchtap='onclickon'></image>
+    <image wx:else src='/images/home/ondianzan.png' class='btomimgs' catchtap='onclickon'></image>
+    <text>|</text>
+    <image src='/images/home/pays.png' class='btomimgsa' catchtap='onbjtappay'></image>
+  </view>
+  <view style='height:50rpx;'></view>
+</view>
+<view class="zhanwei"></view>
+<view class='oncopyuse'>
+  <view>
+    <view>
+      <image wx:if="{{data_source==0}}" src='/images/home/logos.png'></image>
+      <image wx:else src='{{headicon}}'></image>
+    </view>
+    <view wx:if="{{data_source==0}}">黛西新娘</view>
+    <view wx:else>{{nickname}}</view>
+    <view>作者</view>
+    <view wx:if="{{data_source==0}}">本案例的著作权归@黛西新娘所有</view>
+    <view wx:else>本案例的著作权归@{{nickname}}所有</view>
+  </view>
+</view>
+<view class="zhanwei"></view>
+<view class="container" style='font-size:28rpx;margin-top: 63rpx;'>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+<view style='height:15rpx'></view>

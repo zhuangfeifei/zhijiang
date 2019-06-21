@@ -1,0 +1,44 @@
+<!--卡片内容-->
+<view class="onpayc">
+  <view class='onpayc_title'>
+    <image src='{{logo}}'></image>
+  </view>
+  <image mode="aspectFill" wx:if="{{id==0}}" src='{{url+headIcon}}' class='title_imgs'></image>
+  <image mode="aspectFill" wx:else src='{{urls+headIcon}}' class='title_imgs'></image>
+  <view class='title_zctive'>{{thme}}</view>
+  <view class='copyright'>
+    <image wx:for="{{imglist}}" wx:key="{{imglist}}" data-src="{{item}}" src='{{item}}' bindtap='ondoubimg'></image>
+    <view>点击长按识别小程序码</view>
+  </view>
+</view>
+
+<!--分享卡片按钮 转发好友按钮-->
+<view class='shrarh'>
+  <view>
+    <button class='onbtton' bindtap='showPic'>
+      <image src='/images/home/share.png'></image>
+      <text>生成分享卡片</text>
+    </button>
+  </view>
+  <view>
+    <button class='onbotombut' open-type="share">
+      <image src='/images/home/wxicon.png'></image>
+      <text>转发给好友</text>
+    </button>
+  </view>
+</view>
+<!--创建分享卡片-->
+<!-- 分享 S -->
+<view class="share-cover" wx:if="{{showSharePic}}" catchtouchmove='true'>
+  <view class="share-pic-box">
+    <view class="share-pic">
+      <image src="{{sharePicUrl}}" class="sharePic"></image>
+    </view>
+    <button class="share-tips" catchtap='savePic'>保存图片</button>
+  </view>
+</view>
+<!-- 分享 E -->
+
+<!-- canvas S -->
+<canvas canvas-id="shareFrends" class="canvas"></canvas>
+<!-- canvas E -->

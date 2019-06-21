@@ -1,0 +1,87 @@
+<!--pages/my/details/details.wxml-->
+<view id="details">
+
+  <view class="swiper_list">
+      <swiper class="swiper" indicator-dots="true" autoplay  
+        interval="2000" duration="500" circular="true">
+        <block wx:for="{{$state.promotionListDetails.pic}}" wx:key="{{index}}">
+            <swiper-item class="swiper-item">
+                <image src="{{$state.imgUrl && item ? $state.imgUrl + item : '/images/home/noneimgs.png'}}"
+                    class="slide-image {{imgIndex == index ? 'img_active' : ''}}"></image>
+            </swiper-item>
+            <!-- <swiper-item class="swiper-item {{imgIndex == index ? 'img_active' : ''}}{{imgIndex+1 == index ? 'img_actives' : '' }}">
+                <view animation="{{imgIndex == index ? animationHeight : animationHeights}}">
+                    <image mode="aspectFill" src="{{$state.imgUrl + item}}" class="slide-image"/>
+                </view>
+            </swiper-item> -->
+        </block>
+      </swiper> 
+  </view> 
+
+  <view class="details_nav">
+      <view>{{$state.promotionListDetails.title}}</view>
+      <view><text>¥{{$state.promotionListDetails.presentprice}}</text> <text>¥{{$state.promotionListDetails.originalprice}}</text></view>
+      <view>
+        <view class="details_nav_description">
+            <text>套餐：{{$state.promotionListDetails.description}}</text>
+        </view>
+        <!-- <view class="details_nav_descriptions">
+            <view class="div"></view>
+            <image src="/images/home/pay.png" /> 
+        </view> -->
+      </view>
+  </view>
+
+  <view class="shop" hover-class="none" hover-stop-propagation="false">
+     <image src="/images/my/authorization.png" />
+     <view>
+        <text>黛西新娘</text>
+        <view>
+            <image src="/images/home/weixin.png" /> <text>微信认证</text>
+        </view>
+     </view> 
+     <view bindtap="routerUrl" data-url='/pages/boutique/boutique'>全部商品</view>
+  </view>
+
+  <view class="WeddingPackages">
+      <view class="WeddingPackages_title"> <text>套餐</text> </view>
+      <view class="WeddingPackages_content">
+          <text>套餐包含</text> <view>{{$state.promotionListDetails.category_names}}</view> 
+      </view>
+      <view class="WeddingPackages_content">
+          <text>售卖方式</text> <view>{{$state.promotionListDetails.selling_type == 0 ? '租赁' : '售卖'}}</view> 
+      </view>
+      <view class="WeddingPackages_content">
+          <text>套餐内容</text> <view>{{$state.promotionListDetails.description}}</view> 
+      </view>
+      <view class="WeddingPackages_title other"> <text>其他</text> </view>
+      <view class="WeddingPackages_content">
+          <text>0元试纱</text> <view>{{$state.promotionListDetails.tryyarn_type == 0 ? '无' : '有'}}</view> 
+      </view>
+      <view class="WeddingPackages_content">
+          <text>赠送</text> <view>{{$state.promotionListDetails.diving}}</view> 
+      </view>
+      <view class="WeddingPackages_content">
+          <text>补充说明</text> <view>{{$state.promotionListDetails.add_instructions}}</view> 
+      </view>
+  </view>
+
+  <view class="WeddingPackages_tab">
+      <view class="WeddingPackages_tab_title">
+          <view wx:for="{{$state.promotionListDetails.categoryList}}" wx:key="index" class="{{tabindex == index ? 'tab_active' : ''}}" bindtap="tabChange" data-index="{{index}}">
+            <text>{{item.category_name}}\n <text class="{{tabindex == index ? 'tabItem_active' : ''}}">可选一件</text></text>
+          </view>
+      </view>
+      <view class="WeddingPackages_tab_list">
+          <image wx:if="{{isImg}}" class="isImg" src="/images/my/loading.png" animation="{{animationRound}}" />
+          <image mode="aspectFill" bindload="isImg" wx:for="{{$state.promotionListDetails.categoryList[tabindex].pic}}" src="{{$state.imgUrl && item ? $state.imgUrl + item : '/images/home/noneimgs.png'}}" wx:key="index" src="{{$state.imgUrl + item}}"></image>
+      </view>
+  </view>
+
+  <view class="details_bottom">
+      <button open-type='contact'><image src="/images/my/message.png" /></button>
+      <image src="/images/my/phone.png" bindtap="callPhone" />
+      <view bindtap="routerUrl" data-url="/pages/{{isAppoint == 0 ? 'my/appointment/appointment' : 'boutique/tomakes/tomakes'}}">立即预约</view>
+  </view>
+
+</view>

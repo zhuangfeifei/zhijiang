@@ -1,0 +1,25 @@
+<view class='Featured' wx:if="{{$state.piclist[indexasd].clothList}}">
+  <view class='link_viewssd'>
+    <image wx:if="{{isImg}}" animation="{{animationRound}}"  src="/images/my/loading.png" class="lodimgsdf" />
+    <view class='link_conier' wx:for='{{$state.piclist[indexasd].clothList}}' wx:key='{{index}}' data-id='{{index}}'>
+      <view class='list_view'>
+        <view class='list_img' >
+          <image mode="aspectFill"  bindload="isImg"  data-id="{{index}}" src='{{$state.imgUrl + item.thumbnail_pic}}' catchtap='ontapdetils'></image>
+          <!-- <image wx:else src='/images/home/noneimg.png' data-id='{{index}}' catchtap='ontapdetils'></image> -->
+          <view>{{item.goods_name}}</view>
+        </view>
+      </view>
+      <view class='browse'>
+        <image lazy-load="true" wx:if="{{item.iscollotion==1}}" data-id="{{index}}" src='/images/home/oncollection.png'></image>
+        <image wx:else data-id="{{index}}" src='/images/home/collection.png'></image>
+        <text class='browse_texts'>{{item.collection_num}}</text>
+        <image src='/images/home/header.png' class='onlimgs' style="padding-left:35rpx;"></image>
+        <text class="browse_texts">{{item.click_num}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view style="height:50rpx;" wx:if="{{secllod==true}}"></view>
+<view wx:if="{{secllod==false}}" class='btomsar'>
+  <image src='/images/none.png'></image>
+</view>

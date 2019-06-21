@@ -1,0 +1,81 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/index/join/join",
+    "pages/index/wedding_details/wedding_details",
+    "pages/index/wedding_details/onpaydet/onpaydet",
+    "pages/boutique/boutique",
+    "pages/boutique/tomakes/tomakes",
+    "pages/boutique/untomake/untomake",
+    "pages/boutique/detil/detil",
+    "pages/news/news",
+    "pages/news/detail/detail",
+    "pages/my/favorites/favorites",
+    "pages/my/become/become",
+    "pages/my/template-goodsList/template-goodsList",
+    "pages/my/favorites/all-category/all-category",
+    "pages/my/favorites/all-state/all-state",
+    "pages/my/favorites/second-segmentation/second-segmentation",
+    "pages/my/appointment/appointment",
+    "pages/authorization/authorization",
+    "pages/my/setup/setup",
+    "pages/my/certification/certification",
+    "pages/my/certification/template-certification/template-certification",
+    "pages/my/bindphone/bindphone",
+    "pages/my/address/address",
+    "pages/my/add_address/add_address",
+    "pages/my/about/about",
+    "pages/my/complaints_list/complaints_list",
+    "pages/my/complaints/complaints",
+    "pages/my/favorites/favorites-goodsList/favorites-goodsList",
+    "pages/my/template-package/template-package",
+    "pages/my/details/details",
+    "pages/my/instructions/instructions",
+    "pages/index/template-permissions/template-permissions"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "织匠",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序导航展示"
+    }
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab/home.png",
+        "selectedIconPath": "images/tab/home_selected.png"
+      },
+      {
+        "pagePath": "pages/boutique/boutique",
+        "text": "精品区",
+        "iconPath": "images/tab/goods_area.png",
+        "selectedIconPath": "images/tab/goods_area_selected.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "实店新闻",
+        "iconPath": "images/tab/news.png",
+        "selectedIconPath": "images/tab/news_selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的会员",
+        "iconPath": "images/tab/members.png",
+        "selectedIconPath": "images/tab/members_selected.png"
+      }
+    ],
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "color": "#1A213C",
+    "selectedColor": "#F6998C"
+  },
+  "sitemapLocation": "sitemap.json"
+}

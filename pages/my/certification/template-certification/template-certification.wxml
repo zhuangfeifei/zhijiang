@@ -1,0 +1,38 @@
+<!--pages/my/certification/template-certification/template-certification.wxml-->
+<template name="certification-one">
+  <view class='certification_template_nav'>
+    <image class='certification_template_nav_img' src='/images/my/certification.png'></image>
+    <view class='certification_template_file' bindtap='upFile'>
+      <image wx:if="{{fileImg}}" class='fileImg' src='{{fileImg}}'></image>
+      <image wx:if="{{fileImg}}" class='imgDelete' src='/images/my/imgDelete.png' bindtap="delete"></image>
+      <image wx:else src='/images/my/add.png'></image>
+    </view>
+    <button class="{{fileImg ? 'upImg_btn' : ''}}" disabled="{{fileImg ? false : true}}" bindtap='isStatus'>下一步</button>
+  </view>
+</template>
+
+
+
+<template name="certification-two">
+  <view class='certification_template_nav'>
+    <image class='certification_template_nav_img' src='/images/my/template_authorization.png'></image>
+    <view class='certification_template_input'>
+      <input bindinput="bindKeyInput" placeholder="请输入身份证号" placeholder-style="color:#CECECE;" />
+    </view>
+    <button class="{{value ? 'upImg_btn' : ''}}" disabled="{{value ? false : true}}" bindtap='isStatus'>下一步</button>
+  </view>
+</template> 
+
+
+
+<template name="certification-three">
+  <view class='certification_end' style="height: {{screenHeight+'px'}};">
+    <image class='back' src='/images/my/back.png'></image>
+    <view class='success'>
+      <image src='/images/my/success.png'></image>
+      <view>认证完成，请等待审核</view>
+      <text>审核将在3个工作日内反馈结果</text>
+      <view class='certification_success' bindtap='go'>返回首页</view>    
+    </view>
+  </view>
+</template>

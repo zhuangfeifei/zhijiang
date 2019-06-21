@@ -1,0 +1,16 @@
+<!--pages/index/template-permissions/template-permissions.wxml-->
+<template name="permissions">
+  <view id='permissions'>
+    <view class="permissions">
+      <image wx:if="{{$state.userinfo.authstatus == 1}}" src="/images/my/permissions.png" />
+      <image class="permissions_clear" bindtap="permissions_clear" src="/images/my/clear.png" />
+      <view class="permissions_success">{{$state.userinfo.authstatus == 1 ? '权限审核成功' : '权限审核失败'}}</view>
+      <view wx:if="{{$state.userinfo.authstatus == 0}}" class="permissions_error">审核失败原因</view>
+      <view wx:if="{{$state.userinfo.authstatus == 0}}" class="permissions_content">{{$state.userinfo.reason}}</view>
+      <text wx:if="{{$state.userinfo.authstatus == 1}}">恭喜您成为初级会员</text>
+      <view wx:if="{{$state.userinfo.authstatus == 0}}" class="permissions_error_btn" bindtap="routerUrl" data-url="/pages/my/{{$state.userinfo.resonType > 1 ? 'certification/certification' : 'appointment/appointment'}}">
+        {{$state.userinfo.resonType > 1 ? '重新认证' : '预约加盟'}}
+      </view>
+    </view>
+  </view>
+</template>

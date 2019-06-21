@@ -1,0 +1,71 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<!--轮播图-->
+<view class='top-swiper'>
+  <swiper indicator-dots="{{indicatorDots}}" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#fff">
+    <block wx:for="{{imglist}}" wx:key="{{imglist}}">
+      <swiper-item>
+        <image wx:if="{{isImg}}" animation="{{animationRound}}" src="/images/my/loading.png" class="lodimgs" />
+        <image mode="aspectFill" bindload="isImg" src="{{$state.imgUrl+item}}" class="swiper_image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--简介-->
+  <view class='conttext'>
+    <view>{{doos_name}}</view>
+  </view>
+  <view class='conviews' wx:for="{{arry}}" wx:key="{{arry}}" data-id='{{index}}'>
+    <text wx:if="{{arry[index].list==0}}">热销</text>
+    <text wx:if="{{arry[index].list==1}}">新品</text>
+    <text wx:if="{{arry[index].list==2}}">精品</text>
+    <text wx:if="{{arry[index].list!=0&&arry[index].list!=1&&arry[index].list!=2}}">其他</text>
+  </view>
+  <view class='binxinzcan'>
+    <view class='inventory'>库存：{{inventory}} 件</view>
+    <image src='/images/home/pay.png' catchtap='ontappays'></image>
+  </view>
+</view>
+<view class="zhanwei"></view>
+<!--详情-->
+<view class='ondetils'>
+  <!--logo 名称 认证-->
+  <view class='ondetils_logos'>
+    <view class='logos'>
+      <image src='/images/home/logsds.png'></image>
+    </view>
+    <view class='logos_text'>
+      <view class='sogans'>黛西新娘</view>
+      <view class='sogans_relon'>
+        <image src='/images/home/weixin.png'></image>
+        <text>微信认证</text>
+      </view>
+    </view>
+    <view class='ontaodetils' catchtap='bitaplist'>全部商品</view>
+  </view>
+  <view class='zhanwei'></view>
+  <view class='wedding_de'></view>
+  <view class='onzhanweis'>
+    <image src='/images/home/detail.png'></image>
+  </view>
+  <!--内容-->
+  <view class="container" style='font-size:28rpx;'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+  <view style='height:180rpx'></view>
+</view>
+
+<!--底部-->
+<view class='navigation'>
+  <view class='navigation_next'>
+    <image wx:if="{{iscollotion==1}}" src='/images/home/listb.png' catchtap='selectList'></image>
+    <image wx:else data-id="{{index}}" src='/images/home/lista.png' catchtap='selectList'></image>
+  </view>
+  <view class='navigation_next'>
+    <button open-type='contact'>
+      <image src='/images/home/sixin.png'></image>
+    </button>
+  </view>
+  <view class='navigation_next'>
+    <image src='/images/home/iphone.png' catchtap='onipnone'></image>
+  </view>
+  <view class='navigation_nexttap' bindtap="routerUrl" data-url="/pages/{{isAppoint == 0 ? 'my/appointment/appointment' : 'boutique/tomakes/tomakes'}}">立即预约</view>
+</view>

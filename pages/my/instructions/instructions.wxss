@@ -1,0 +1,8 @@
+/* pages/my/instructions/instructions.wxss */
+#instructions{
+    width: 100%; box-sizing: border-box; padding: 40rpx;
+}
+
+#instructions view{
+    width: 100%; font-size: 28rpx; color: #1A1A1A; line-height: 48rpx; margin-bottom: 50rpx;
+}

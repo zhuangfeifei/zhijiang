@@ -1,0 +1,15 @@
+/* pages/my/all-state/all-state.wxss */
+#state{
+  width: 100%; background-color: #FFFFFF;
+}
+
+.state_list{
+  width: 100%; display: flex; flex-wrap: wrap; padding-left: 40rpx; box-sizing: border-box; padding-top: 30rpx;
+}
+.state_nav{
+  width: 325rpx; height: 64rpx; font-size: 24rpx; color: #2B2B2B; line-height: 64rpx; box-sizing: border-box; margin-bottom: 20rpx;
+  display: flex; justify-content: space-between; padding: 0 20rpx; background-color: #F6F6F6; margin-right: 20rpx;
+}
+.state_nav text:nth-child(2){
+  font-size: 20rpx; color: #808080;
+}

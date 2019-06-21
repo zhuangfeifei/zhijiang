@@ -1,0 +1,94 @@
+/* pages/boutique/boutique.wxss */
+
+.navterion {
+  width: 500rpx;
+  height: 131rpx;
+  background: rgba(255, 255, 255, 1);
+  margin: auto;
+  position: relative;
+}
+
+.navterion image {
+  width: 100%;
+  height: 93rpx;
+}
+
+.ontapimlist {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.ontapimlist view {
+  width: calc(100% / 5);
+  height: 100%;
+}
+
+.ontapimlist_active {
+  width: calc(100% / 5 * 2)!important;
+  height: 100%;
+}
+
+.onejian {
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 1);
+}
+
+.onetext {
+  width: 100%;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(26, 33, 60, 1);
+}
+
+.flex-container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  max-height: 474rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.item-contaion {
+  width: 234rpx;
+  margin-bottom: 6rpx;
+  height: 234rpx;
+  text-align: center;
+}
+
+.item-contaion image {
+  width: 234rpx;
+  height: 234rpx;
+  border-radius: 10rpx;
+}
+
+.lodimgs {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  left: calc((100% - 40rpx) / 2);
+  margin-top: 20rpx
+}
+
+.btnmore {
+  width: 100%;
+  height: 110rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.btnmore image {
+  width: 56rpx;
+  height: 40rpx;
+  margin-top: 20rpx;
+}

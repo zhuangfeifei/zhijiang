@@ -1,0 +1,60 @@
+<!--pages/my/my.wxml-->
+<import src="./template-goodsList/template-goodsList" />
+<import src="./template-package/template-package" />
+
+<view id="my">
+
+  <!-- 头部 -->
+  <view class="my_nav">
+    <image class='portrait_back' src="{{$state.url + '/static/images/portrait_back.png'}}"></image>
+    <view class='my_nav_'>
+      <view class='name'>{{$state.userinfo.nickname}}<text>\n{{$state.userinfo.levelName}}</text></view>
+      <view class='my_portrait'>
+        <image src='/images/my/about.png' bindtap="routerUrl" data-url='/pages/my/about/about'></image>
+        <view>
+          <image src='/images/my/portrait_border.png'></image>
+          <image src='{{$state.userinfo.avatar}}'></image>
+        </view>
+        <image src='/images/my/set.png' bindtap="routerUrl" data-url='/pages/my/setup/setup'></image>
+      </view>
+      <view class='my_nav_tab'>
+        <view><image src='/images/my/appointment.png' bindtap="routerUrl" data-url="/pages/{{isAppoint == 0 ? 'my/appointment/appointment' : 'boutique/tomakes/tomakes'}}"></image></view>
+        <view><image src='/images/my/divider.png'></image></view>
+        <view><button open-type='contact'><image src='/images/my/direct_messages.png'></image></button></view>
+        <view><image src='/images/my/divider.png'></image></view>
+        <view><image src='/images/my/favorites.png' bindtap="routerUrl" data-url='/pages/my/favorites/favorites'></image></view>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 成为高级会员 -->
+  <view class='Become'>
+    <view class='Become_title'><image src="/images/my/{{$state.userinfo.userType == 1 ? 'become' : 'senior'}}.png"></image></view>
+    <view class='Become_tab'>
+      <view class='Become_tab_list'>
+        <view>免费拿货</view>
+        <image src='/images/my/taking_goods.png'></image>
+      </view>
+      <view class='Become_tab_list'>
+        <view>区域代理</view>
+        <image src='/images/my/agent.png'></image>
+      </view>
+      <view class='Become_tab_list'>
+        <view>更多特权</view>
+        <image src='/images/my/privilege.png'></image>
+      </view>
+    </view>
+    <view class='Details' bindtap="routerUrl" data-url='/pages/my/become/become'>详情了解</view>
+  </view>
+
+  <!-- 为您推荐 -->
+  <view class='recommended'>
+    <view class='recommended_title'>
+      <image src="/images/my/{{$state.userinfo.userType == 1 ? 'recommended' : 'commodity'}}.png"></image>
+    </view>
+    <view class='goodsList'>
+      <template is="{{$state.userinfo.userType == 1 ? 'package' : 'goodsList'}}" data="{{$state, promotionList}}"></template>
+    </view>
+  </view>
+</view>

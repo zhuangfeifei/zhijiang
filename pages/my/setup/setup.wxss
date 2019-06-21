@@ -1,0 +1,13 @@
+/* pages/my/setup/setup.wxss */
+#setup{
+  width: 100%; height: 100%; background-color: #FFFFFF; padding: 0 40rpx; box-sizing: border-box;
+}
+
+.setup_list{
+  width: 100%; height: 124rpx; border-bottom: 1rpx solid #E8E8E8; font-size: 30rpx; color: #1A1A1A;
+  display: flex; justify-content: space-between; align-items: center; font-family:PingFang-SC-Medium; font-weight:500;
+}
+
+image{
+  width: 14rpx; height: 24rpx; margin-left: 10rpx;
+}

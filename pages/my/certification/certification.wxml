@@ -1,0 +1,23 @@
+<!--pages/my/certification/certification.wxml-->
+<import src="./template-certification/template-certification" />
+
+<view id='certification'>
+
+  <view class='certification_nav'>
+    <view class="{{state == 0 ? 'status' : ''}}">1</view><view></view>
+    <view class="{{state == 1 ? 'status' : ''}}">2</view><view></view>
+    <view class="{{state == 2 ? 'status' : ''}}">3</view>
+  </view>
+
+  <template is="{{state == 0 ? 'certification-one' : state == 1 ? 'certification-two' : 'certification-three'}}" data="{{fileImg,value,screenHeight}}"/>
+
+  <view wx:if="{{showModal}}" class='certification_modal'>
+    <view class='certification_modal_'>
+      <view>示例照片</view>
+      <image src="{{$state.url + '/static/images/sample.png'}}"></image>
+      <text>Tips：可参照示例照片上传授权牌照片</text>
+      <view class='certification_modal_bottom' bindtap='showModal'>知道了</view>
+    </view>
+  </view>
+
+</view>
